@@ -1,0 +1,140 @@
+ (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
+diff --git a/index.html b/index.html
+new file mode 100644
+index 0000000000000000000000000000000000000000..cb7424153d943054be82a6f0e490c9cd8a18b9a0
+--- /dev/null
++++ b/index.html
+@@ -0,0 +1,130 @@
++<!doctype html>
++<html lang="es" data-theme="dark">
++  <head>
++    <meta charset="UTF-8" />
++    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
++    <title>Nova Studio | Diseño Web que Convierte</title>
++    <meta
++      name="description"
++      content="Landing moderna en español con animaciones suaves, formulario validado y modo oscuro elegante."
++    />
++    <link rel="stylesheet" href="styles.css" />
++  </head>
++  <body>
++    <header class="hero reveal-on-scroll">
++      <nav class="nav container">
++        <a class="brand" href="#">NOVA<span>STUDIO</span></a>
++
++        <div class="nav-controls">
++          <button class="theme-toggle" type="button" aria-label="Cambiar tema" aria-pressed="true">
++            <span class="theme-icon" aria-hidden="true">🌙</span>
++            <span class="theme-label">Oscuro</span>
++          </button>
++          <button class="nav-toggle" type="button" aria-label="Abrir menú" aria-expanded="false">☰</button>
++        </div>
++
++        <ul class="nav-links">
++          <li><a href="#servicios">Servicios</a></li>
++          <li><a href="#proceso">Proceso</a></li>
++          <li><a href="#testimonios">Clientes</a></li>
++          <li><a href="#contacto">Contacto</a></li>
++        </ul>
++      </nav>
++
++      <section class="hero-content container reveal-on-scroll">
++        <p class="eyebrow">Diseño + Estrategia + Performance</p>
++        <h1>Tu web puede verse brutal y vender mejor.</h1>
++        <p class="subtitle">
++          Creamos experiencias rápidas, elegantes y pensadas para conversión.
++          Una landing no solo bonita: una máquina de resultados.
++        </p>
++        <div class="hero-actions">
++          <a class="btn btn-primary" href="#contacto">Quiero una propuesta</a>
++          <a class="btn btn-ghost" href="#servicios">Ver servicios</a>
++        </div>
++      </section>
++      <div class="hero-glow" aria-hidden="true"></div>
++    </header>
++
++    <main>
++      <section id="servicios" class="section container reveal-on-scroll">
++        <h2>Servicios para crecer online</h2>
++        <p class="section-text">Todo lo necesario para lanzar una web profesional de alto impacto.</p>
++        <div class="grid cards">
++          <article class="card reveal-on-scroll">
++            <h3>Diseño UI/UX</h3>
++            <p>Interfaces limpias, jerarquía visual y enfoque total en experiencia de usuario.</p>
++          </article>
++          <article class="card reveal-on-scroll">
++            <h3>Desarrollo Web</h3>
++            <p>Webs rápidas, responsive y optimizadas para SEO técnico y rendimiento.</p>
++          </article>
++          <article class="card reveal-on-scroll">
++            <h3>Embudo de Conversión</h3>
++            <p>Estructura, copy y CTAs pensados para transformar visitas en clientes.</p>
++          </article>
++        </div>
++      </section>
++
++      <section id="proceso" class="section section-muted reveal-on-scroll">
++        <div class="container">
++          <h2>Cómo trabajamos</h2>
++          <div class="timeline">
++            <div class="reveal-on-scroll"><strong>1.</strong> Discovery y objetivos de negocio.</div>
++            <div class="reveal-on-scroll"><strong>2.</strong> Diseño visual + prototipo de navegación.</div>
++            <div class="reveal-on-scroll"><strong>3.</strong> Desarrollo, QA y optimización final.</div>
++            <div class="reveal-on-scroll"><strong>4.</strong> Lanzamiento y mejora continua.</div>
++          </div>
++        </div>
++      </section>
++
++      <section id="testimonios" class="section container reveal-on-scroll">
++        <h2>Lo que dicen nuestros clientes</h2>
++        <div class="grid testimonials">
++          <blockquote class="reveal-on-scroll">
++            “Subimos la tasa de contacto un 38% en menos de 2 meses.”
++            <cite>— Laura M., eCommerce</cite>
++          </blockquote>
++          <blockquote class="reveal-on-scroll">
++            “Pasamos de una web lenta a una plataforma premium.”
++            <cite>— Carlos R., Consultoría</cite>
++          </blockquote>
++        </div>
++      </section>
++    </main>
++
++    <footer id="contacto" class="footer reveal-on-scroll">
++      <div class="container footer-inner">
++        <div>
++          <h2>¿Listo para mejorar tu web?</h2>
++          <p>Cuéntame tu idea y te propongo una versión mejorada en 48 horas.</p>
++        </div>
++
++        <form id="contact-form" class="contact-form" novalidate>
++          <label>
++            Nombre
++            <input id="nombre" name="nombre" type="text" autocomplete="name" required minlength="2" />
++            <small class="error" id="error-nombre"></small>
++          </label>
++
++          <label>
++            Email
++            <input id="email" name="email" type="email" autocomplete="email" required />
++            <small class="error" id="error-email"></small>
++          </label>
++
++          <label>
++            Mensaje
++            <textarea id="mensaje" name="mensaje" rows="4" required minlength="15"></textarea>
++            <small class="error" id="error-mensaje"></small>
++          </label>
++
++          <button class="btn btn-primary" type="submit">Enviar propuesta</button>
++          <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
++        </form>
++      </div>
++    </footer>
++
++    <script src="script.js"></script>
++  </body>
++</html>
+ 
+EOF
+)
