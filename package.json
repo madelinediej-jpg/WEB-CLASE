@@ -1,0 +1,10 @@
+{
+  "name": "web-clase-landing",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Landing estática con modo claro/oscuro, validación y animaciones suaves.",
+  "scripts": {
+    "preview": "python3 -m http.server 5500",
+    "preview:open": "python3 -m http.server 5500"
+  }
+}
