@@ -1,0 +1,20 @@
+ (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
+diff --git a/package.json b/package.json
+new file mode 100644
+index 0000000000000000000000000000000000000000..61211402a474f041ddb76768a6c37df15fda203c
+--- /dev/null
++++ b/package.json
+@@ -0,0 +1,10 @@
++{
++  "name": "web-clase-landing",
++  "version": "1.0.0",
++  "private": true,
++  "description": "Landing estática con modo claro/oscuro, validación y animaciones suaves.",
++  "scripts": {
++    "preview": "python3 -m http.server 5500",
++    "preview:open": "python3 -m http.server 5500"
++  }
++}
+ 
+EOF
+)
